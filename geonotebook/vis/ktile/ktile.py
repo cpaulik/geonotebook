@@ -150,7 +150,7 @@ class Ktile(object):
             # TODO:  Needs to be moved into RasterData level API
             'raster_x_size': data.reader.width,
             'raster_y_size': data.reader.height,
-            'transform': data.reader.dataset.profile['transform'],
+            'transform': data.reader.dataset.get_transform(),
             'dtype': data.reader.dataset.profile['dtype']
         }
         if 'map_srs' in kwargs:
